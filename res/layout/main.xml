@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                tools:context=".TodoActivity" android:clickable="false">
+
+    <Button
+            android:id="@+id/percent_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonText"
+            android:layout_marginTop="87dp"
+            android:layout_marginLeft="44dp"
+            android:layout_below="@+id/inputNumber"
+            android:layout_alignParentLeft="true"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/inputNumber"
+            android:layout_marginTop="132dp"
+            android:layout_alignParentTop="true" android:layout_alignLeft="@+id/percent_10"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twentyPercent"
+            android:id="@+id/percent_20"
+            android:layout_alignTop="@+id/percent_10"
+            android:layout_toRightOf="@+id/percent_10"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thirtyPercent"
+            android:id="@+id/percent_30"
+            android:layout_alignTop="@+id/percent_10"
+            android:layout_toRightOf="@+id/percent_20"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/staticText"
+            android:id="@+id/textView"
+            android:layout_below="@+id/percent_10" android:layout_alignLeft="@+id/percent_10"
+            android:layout_marginTop="51dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/result"
+            android:layout_alignTop="@id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:visibility="invisible"
+            android:textIsSelectable="true"/>
+
+
+</RelativeLayout>

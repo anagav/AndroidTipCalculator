@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="buttonText">10%</string>
+    <string name="twentyPercent">20%</string>
+    <string name="thirtyPercent">30%</string>
+    <string name="staticText">Tip is:</string>
+</resources>
