@@ -1,7 +1,6 @@
 package com.personal.sample.TipCalculator;
 
 import android.app.Activity;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -31,44 +30,39 @@ public class MyActivity extends Activity {
         percent_10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!checkIfValid()){
-                    return;
-                }
-                result.setText(calculateTip(10, Float.valueOf(inputNumber.getText().toString())));
-                result.setVisibility(View.VISIBLE);
-                result.setTextColor(Color.GREEN);
+                checkAndCalculate(10);
             }
         });
 
         findViewById(R.id.percent_20).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!checkIfValid()) {
-                    return;
-                }
-                result.setText(calculateTip(20, Float.valueOf(inputNumber.getText().toString())));
-                result.setVisibility(View.VISIBLE);
-                result.setTextColor(Color.GREEN);
+                checkAndCalculate(20);
             }
         });
 
         findViewById(R.id.percent_30).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!checkIfValid()) {
-                    return;
-                }
-                result.setText(calculateTip(30, Float.valueOf(inputNumber.getText().toString())));
-                result.setVisibility(View.VISIBLE);
-                result.setTextColor(Color.GREEN);
+                checkAndCalculate(30);
+
             }
         });
 
 
     }
 
+    private void checkAndCalculate(int i) {
+        if (!checkIfValid()) {
+            return;
+        }
+        result.setText(calculateTip(30, Float.valueOf(inputNumber.getText().toString())));
+        result.setVisibility(View.VISIBLE);
+        result.setTextColor(Color.GREEN);
+    }
+
     private boolean checkIfValid() {
-        if(inputNumber.getText()==null || inputNumber.getText().toString().trim().equals("")){
+        if (inputNumber.getText() == null || inputNumber.getText().toString().trim().equals("")) {
             result.setText("Invalid, enter  a number");
             result.setTextColor(Color.RED);
             result.setVisibility(View.VISIBLE);

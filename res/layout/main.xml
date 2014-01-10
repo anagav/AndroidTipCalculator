@@ -55,6 +55,7 @@
             android:id="@+id/result"
             android:layout_alignTop="@id/textView"
             android:layout_toRightOf="@+id/textView"
+
             android:visibility="invisible"
             android:textIsSelectable="true"/>
 
