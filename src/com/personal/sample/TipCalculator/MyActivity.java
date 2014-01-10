@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 public class MyActivity extends Activity {
 
-    Button percent_10;
     EditText inputNumber;
     TextView result;
 
@@ -23,11 +22,11 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        percent_10 = (Button) findViewById(R.id.percent_10);
+
         inputNumber = (EditText) findViewById(R.id.inputNumber);
 
         result = (TextView) findViewById(R.id.result);
-        percent_10.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.percent_10).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkAndCalculate(10);
@@ -45,7 +44,6 @@ public class MyActivity extends Activity {
             @Override
             public void onClick(View view) {
                 checkAndCalculate(30);
-
             }
         });
 
@@ -56,14 +54,14 @@ public class MyActivity extends Activity {
         if (!checkIfValid()) {
             return;
         }
-        result.setText(calculateTip(30, Float.valueOf(inputNumber.getText().toString())));
+        result.setText(calculateTip(i, Float.valueOf(inputNumber.getText().toString())));
         result.setVisibility(View.VISIBLE);
         result.setTextColor(Color.GREEN);
     }
 
     private boolean checkIfValid() {
         if (inputNumber.getText() == null || inputNumber.getText().toString().trim().equals("")) {
-            result.setText("Invalid, enter  a number");
+            result.setText("    enter  a number");
             result.setTextColor(Color.RED);
             result.setVisibility(View.VISIBLE);
             return false;
