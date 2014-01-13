@@ -2,10 +2,10 @@
 <resources>
     <string name="app_name">TipCalculator</string>
     <string name="buttonText">10%</string>
-    <string name="twentyPercent">20%</string>
-    <string name="thirtyPercent">30%</string>
+    <string name="twentyPercent">15%</string>
+    <string name="thirtyPercent">20%</string>
     <string name="staticText">Tip is:</string>
     <integer name="percent_10">10</integer>
-    <integer name="percent_20">20</integer>
-    <integer name="percent_30">30</integer>
+    <integer name="percent_20">15</integer>
+    <integer name="percent_30">20</integer>
 </resources>

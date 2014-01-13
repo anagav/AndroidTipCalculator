@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -36,14 +35,14 @@ public class MyActivity extends Activity {
         findViewById(R.id.percent_20).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkAndCalculate(20);
+                checkAndCalculate(15);
             }
         });
 
         findViewById(R.id.percent_30).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkAndCalculate(30);
+                checkAndCalculate(20);
             }
         });
 
@@ -70,7 +69,7 @@ public class MyActivity extends Activity {
     }
 
     public String calculateTip(int percentage, float total) {
-        return Float.toString((total * percentage) / 100);
+        return " $"+ Float.toString((total * percentage) / 100);
     }
 
 
